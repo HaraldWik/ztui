@@ -15,6 +15,10 @@ A minimal TUI liberary for Zig.
 - **Add platform support for non unix operating systems (Windows)**
 - Add more examples
 
+## Installation
+
+**zig fetch --save https://github.com/HaraldWik/ztui/archive/refs/heads/main.tar.gz**
+
 This is a simple example
 
 ```zig
