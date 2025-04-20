@@ -31,7 +31,7 @@ pub fn main() !void {
     defer screen.deinit();
 
     while (true) {
-        screen.write("Hello, world! {d}", .{6 * 9}, 5, 9);
+        try screen.write("Hello, world! {d}", .{6 * 9}, 5, 9);
 
         switch (try screen.getInput()) {
             ztui.Input.exit => break,

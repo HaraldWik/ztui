@@ -99,7 +99,7 @@ pub const Screen = struct {
         };
     }
 
-    pub fn deinit(self: *Self) void {
+    pub fn deinit(self: Self) void {
         const writer = io.getStdOut().writer();
 
         writer.writeAll("\x1b[?1049l") catch unreachable; // Switch to main buffer
@@ -178,18 +178,23 @@ pub const Screen = struct {
     }
 
     pub fn debug(self: Self, comptime fmt: []const u8, args: anytype) void {
-        self.clear() catch unreachable;
+        switch (builtin.mode) {
+            .Debug => {
+                self.clear() catch unreachable;
 
-        while (true) {
-            switch (self.getInput() catch unreachable) {
-                Input.exit => return,
-                'c' => self.clear() catch unreachable,
-                else => {},
-            }
+                while (true) {
+                    switch (self.getInput() catch unreachable) {
+                        Input.exit => return,
+                        'c' => self.clear() catch unreachable,
+                        else => {},
+                    }
 
-            std.debug.print("\x1b[31m", .{});
-            std.debug.print(fmt, args);
-            std.debug.print("\x1b[0m", .{});
+                    std.debug.print("\x1b[31m", .{});
+                    std.debug.print(fmt, args);
+                    std.debug.print("\x1b[0m", .{});
+                }
+            },
+            else => {},
         }
     }
 

@@ -1,6 +1,9 @@
 .{
     .name = .ztui,
     .version = "0.0.0",
+
+    .dependencies = .{},
+
     .fingerprint = 0x10180b2759308866,
     .minimum_zig_version = "0.15.0-dev.155+acfdad858",
 
@@ -12,6 +15,4 @@
         "README.md",
         ".gitignore",
     },
-
-    .dependencies = .{},
 }

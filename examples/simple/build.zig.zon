@@ -1,0 +1,23 @@
+.{
+    .name = .simple,
+    .version = "0.0.1",
+    .dependencies = .{
+        .ztui = .{
+            .url = "https://github.com/HaraldWik/ztui/archive/refs/heads/main.tar.gz",
+            .hash = "ztui-0.0.0-ZogwWWomAABFxIFtrvv7zgjmtUoBOG_Xn12B1i2fLsvF",
+        },
+    },
+
+    .fingerprint = 0xc17b3d02feddbad1,
+
+    .minimum_zig_version = "0.15.0-dev.155+acfdad858",
+
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        // For example...
+        //"LICENSE",
+        //"README.md",
+    },
+}
