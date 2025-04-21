@@ -11,10 +11,11 @@ pub fn main() !void {
     while (true) {
         try screen.write("Hello, world! {d}", .{num}, 5, 9);
 
-        switch (try screen.getInput()) {
-            ztui.Input.exit => break,
-            ztui.Input.up => num += 1,
-            ztui.Input.down => num -= 1,
+        switch (try screen.getEvent()) {
+            .exit => break,
+            .up => num += 1,
+            .down => num -= 1,
+            .esc => num = 0,
             else => {},
         }
 

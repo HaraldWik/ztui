@@ -1,10 +1,9 @@
 .{
     .name = .simple,
-    .version = "0.0.1",
+    .version = "0.0.2",
     .dependencies = .{
         .ztui = .{
-            .url = "https://github.com/HaraldWik/ztui/archive/refs/heads/main.tar.gz",
-            .hash = "ztui-0.0.0-ZogwWWomAABFxIFtrvv7zgjmtUoBOG_Xn12B1i2fLsvF",
+            .path = "../..",
         },
     },
 
