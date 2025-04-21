@@ -12,7 +12,7 @@ A minimal TUI liberary for Zig.
 
 | Tasks                            | Done     |
 | -------------------------------- | -------- |
-| Add better input system          | &#x2611  |
+| Add better input system          | &#x2611; |
 | Add simple game example          | &#x2610; |
 | Improve event system (input)     | &#x2610; |
 | **Windows support**              | &#x2610; |
