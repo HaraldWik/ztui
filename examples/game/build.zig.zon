@@ -1,0 +1,21 @@
+.{
+    .name = .game,
+    .version = "0.0.0",
+    .fingerprint = 0x232b318c86643d70,
+    .minimum_zig_version = "0.15.0-dev.155+acfdad858",
+
+    .dependencies = .{
+        .ztui = .{
+            .path = "../..",
+        },
+    },
+
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        // For example...
+        //"LICENSE",
+        //"README.md",
+    },
+}
