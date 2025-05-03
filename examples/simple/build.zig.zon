@@ -1,15 +1,14 @@
 .{
     .name = .simple,
     .version = "0.0.2",
+    .fingerprint = 0xc17b3d02feddbad1,
+    .minimum_zig_version = "0.15.0-dev.155+acfdad858",
+
     .dependencies = .{
         .ztui = .{
             .path = "../..",
         },
     },
-
-    .fingerprint = 0xc17b3d02feddbad1,
-
-    .minimum_zig_version = "0.15.0-dev.155+acfdad858",
 
     .paths = .{
         "build.zig",

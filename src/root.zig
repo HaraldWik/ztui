@@ -236,15 +236,15 @@ pub const Screen = struct {
                 self.clear() catch unreachable;
 
                 while (true) {
-                    switch (self.getInput() catch unreachable) {
-                        Input.exit => return,
-                        'c' => self.clear() catch unreachable,
+                    std.debug.print("\x1b[31m" ++ fmt ++ "\x1b[0m", args);
+
+                    switch (self.getEvent() catch unreachable) {
+                        .exit => return,
+                        .c => self.clear() catch unreachable,
                         else => {},
                     }
 
-                    std.debug.print("\x1b[31m", .{});
-                    std.debug.print(fmt, args);
-                    std.debug.print("\x1b[0m", .{});
+                    self.clear() catch unreachable;
                 }
             },
             else => {},

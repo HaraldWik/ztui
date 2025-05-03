@@ -81,7 +81,7 @@ pub fn Terminal(out: fs.File) type {
             pub fn getSize(_: Self) !struct { usize, usize } {
                 if (!io.getStdOut().supportsAnsiEscapeCodes()) return .{ 0, 0 };
 
-                var buf: std.posix.system.winsize = undefined;
+                var buf: std.posix.winsize = undefined;
                 return switch (std.posix.errno(
                     std.posix.system.ioctl(
                         out.handle,

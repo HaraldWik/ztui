@@ -1,6 +1,6 @@
-# ZTUI - Zig Tui
+# ztui - Zig Tui
 
-A minimal TUI liberary for Zig.
+A minimal ~~cross platform~~ TUI liberary for Zig.
 
 ### Supports
 
@@ -8,21 +8,26 @@ A minimal TUI liberary for Zig.
 - Input with arrows
 - And ofc simple TUI things
 
+---
+
 ### Roadmap 2025 (Q2 - Q4)
 
-| Tasks                            | Done     |
-| -------------------------------- | -------- |
-| Add better input system          | &#x2611; |
-| Add simple game example          | &#x2610; |
-| Improve event system (input)     | &#x2610; |
-| **Windows support**              | &#x2610; |
-| Add simple UI elements (widgets) | &#x2610; |
+_These may not be completed since I'm currently not interested in working on this project much, but you're free to fork it or submit a pull request_
+
+| Tasks                            | Status | Tested |
+| -------------------------------- | ------ | ------ |
+| Add better input system          | ✅     | ✅     |
+| Add simple game example          | ✅     | ✅     |
+| **Windows support**              | ⏳     | ❌     |
+| Add simple UI elements (widgets) | ❌     | ❌     |
+
+---
 
 ### Installation
 
-`zig fetch --save https://github.com/HaraldWik/ztui/archive/refs/heads/main.tar.gz`
+    zig fetch --save https://github.com/HaraldWik/ztui/archive/refs/heads/main.tar.gz
 
-_build.zig_
+###### build.zig
 
 ```zig
 const ztui_dep = b.dependency("ztui", .{
@@ -31,6 +36,8 @@ const ztui_dep = b.dependency("ztui", .{
 });
 exe.root_module.addImport("ztui", ztui_dep.module("ztui"));
 ```
+
+---
 
 ### Simple example
 
